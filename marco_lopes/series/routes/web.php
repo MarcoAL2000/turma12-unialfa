@@ -14,8 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/series', [SeriesController::class, 'index']) -> name('list_series');
-
-Route::get('/series/criar', [SeriesController::class, 'create']) -> name('form_criar_serie');
-
-Route::post('/series/criar', [SeriesController::class, 'store']) -> name('series.store');
+Route::get('/series', [SeriesController::class, 'index'])->name('list_series');
+Route::get('/series/criar', [SeriesController::class, 'create'])->name('form_criar_serie');
+Route::post('/series/criar', [SeriesController::class, 'store'])->name('series.store');
+Route::delete('/series/{id}', [SeriesController::class, 'destroy'])->name('series.destroy');

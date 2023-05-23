@@ -13,3 +13,5 @@ use App\Http\Controllers\ClientController;
 //Route::delete('/clients/{id}', [ClientController::class, 'destroy'])->name('clients.destroy');
 
 Route::resource('/clients', ClientController::class);
+Route::resource('/products', ProductController::class);
+
